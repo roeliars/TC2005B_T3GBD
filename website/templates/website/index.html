@@ -1,0 +1,57 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block main %}
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+</div>
+
+<!-- Approach -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Propósito</h6>
+    </div>
+    <div class="card-body">
+        <p>Conocer cómo usar los datos que tenemos en nuestra DB para crear gráficas en nuestras páginas web.
+        </p>
+    </div>
+</div>
+
+<!-- Illustrations -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Instrucciones</h6>
+    </div>
+    <div class="card-body">
+        <div class="text-center">
+            
+        </div>
+        <p>Crear un nuevo proyecto de Django. El proyecto deberá tener una aplicación y la aplicación deberá 
+            tener 1 página web que muestre al menos una gráfica cuyos datos provengan de la DB y al menos un dato 
+            simple y un listado de datos.</p>
+
+        <br>
+
+        <p><strong>Requerimientos generales:</strong> </p>
+        <ol type=”A”>
+            <li>Crear un proyecto de Django</li>
+            <li>Crear una aplicación en el proyecto.</li>
+            <li>Crear un modelo de DB (sqlite3) que contenga al menos 1 tabla. Se sugiere que tomen como inspiración
+                 alguna de las tablas de su modelo del reto. Quizá la mejor tabla para comenzar a trabajar es 
+                 aquella donde guardamos las interacciones de los estudiantes con nuestro videojuego. Esta tabla 
+                 debería tener alguna información sobre las acciones, tiempos y resultados que los estudiantes 
+                 obtienen al interactuar con el juego.</li>
+            <li>Crear una página web en html que muestre una gráfica con algunos de los datos de la tabla. Además 
+                se deberá mostrar en otra parte de la página algún dato individual que se haya obtenido de la misma
+                tabla. Finalmente se deberá desplegar un listado de algunos de los registros provenientes de la 
+                misma tabla en formato de tabla o lista.</li>
+          </ol>
+
+        <a target="_blank" rel="nofollow" href="https://experiencia21.tec.mx/courses/347762/assignments/11888230">Ir a la asignación en Canvas &rarr;</a>
+    </div>
+</div>
+
+{% endblock %}
+{% block localscripts %}
+<script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
+{% endblock %}
