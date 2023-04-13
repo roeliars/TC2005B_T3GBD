@@ -12,7 +12,7 @@ def log(request):
     return JsonResponse(latest_logs, safe=False)
 
 def charts(request):
-    maxp = Log.objects.all().aggregate(Max('points'))
+    maxp = Log.objects.order_by('points')[:1].values().aggregate(Max('points'))
     pointList = Log.objects.all().order_by('date')
     ctx = {'maxp': maxp["points__max"], "pointList": pointList}
     return render(request, "website/charts.html", ctx)
